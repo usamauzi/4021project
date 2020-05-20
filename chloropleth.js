@@ -21,7 +21,7 @@ function chloropleth(){
   // Load external data and boot
   d3.queue()
     .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
-    .defer(d3.csv, "/Data/chloroplethworld.csv", function(d) { data.set(d.code, +d.pop); })
+    .defer(d3.csv, "/4021project/Data/chloroplethworld.csv", function(d) { data.set(d.code, +d.pop); })
     .await(ready);
   
   function ready(error, topo) {
